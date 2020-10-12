@@ -1,4 +1,5 @@
 #import "Tnk.h"
+#import <React/RCTLog.h>
 
 @implementation Tnk
 
@@ -14,6 +15,11 @@ RCT_REMAP_METHOD(multiply,
   NSNumber *result = @([a floatValue] * [b floatValue]);
 
   resolve(result);
+}
+
+RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
+{
+  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
 }
 
 @end
