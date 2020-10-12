@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-
 		5E555C0D2413F4C50049A1A2 /* Tnk.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Tnk.mm */; };
+		FAB90947253447DD00B35395 /* Tnk.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB90946253447DD00B35395 /* Tnk.m */; };
+		FAB9094B2534485C00B35395 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB9094A2534485C00B35395 /* libz.tbd */; };
+		FAB9094E2534486400B35395 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB9094D2534486400B35395 /* MediaPlayer.framework */; };
+		FAB909502534486C00B35395 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB9094F2534486C00B35395 /* AdSupport.framework */; };
+		FAB909522534487100B35395 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB909512534487100B35395 /* SystemConfiguration.framework */; };
+		FAB909542534488300B35395 /* libtnksdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB909532534488300B35395 /* libtnksdk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,11 +30,15 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libTnk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTnk.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-
 		B3E7B5881CC2AC0600A0062D /* Tnk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tnk.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* Tnk.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Tnk.mm; sourceTree = "<group>"; };
-
+		FAB90946253447DD00B35395 /* Tnk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tnk.m; sourceTree = "<group>"; };
+		FAB9094A2534485C00B35395 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		FAB9094D2534486400B35395 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/iOSSupport/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		FAB9094F2534486C00B35395 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		FAB909512534487100B35395 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		FAB909532534488300B35395 /* libtnksdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtnksdk.a; path = ../../../../Downloads/TNK_AD_MODULE_202010/sdklib/libtnksdk.a; sourceTree = "<group>"; };
+		FAB909552534489200B35395 /* tnksdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tnksdk.h; path = ../../../../Downloads/TNK_AD_MODULE_202010/sdklib/tnksdk.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB909542534488300B35395 /* libtnksdk.a in Frameworks */,
+				FAB909522534487100B35395 /* SystemConfiguration.framework in Frameworks */,
+				FAB909502534486C00B35395 /* AdSupport.framework in Frameworks */,
+				FAB9094E2534486400B35395 /* MediaPlayer.framework in Frameworks */,
+				FAB9094B2534485C00B35395 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,13 +68,25 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-
+				FAB909552534489200B35395 /* tnksdk.h */,
+				FAB90946253447DD00B35395 /* Tnk.m */,
 				B3E7B5881CC2AC0600A0062D /* Tnk.h */,
 				B3E7B5891CC2AC0600A0062D /* Tnk.mm */,
-
 				134814211AA4EA7D00B7C361 /* Products */,
+				FAB909492534485C00B35395 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		FAB909492534485C00B35395 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAB909532534488300B35395 /* libtnksdk.a */,
+				FAB909512534487100B35395 /* SystemConfiguration.framework */,
+				FAB9094F2534486C00B35395 /* AdSupport.framework */,
+				FAB9094D2534486400B35395 /* MediaPlayer.framework */,
+				FAB9094A2534485C00B35395 /* libz.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,10 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-
 				5E555C0D2413F4C50049A1A2 /* Tnk.mm in Sources */,
-
+				FAB90947253447DD00B35395 /* Tnk.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +260,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Tnk;
 				SKIP_INSTALL = YES;
-
 			};
 			name = Debug;
 		};
@@ -254,7 +276,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Tnk;
 				SKIP_INSTALL = YES;
-
 			};
 			name = Release;
 		};
