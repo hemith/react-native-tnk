@@ -38,7 +38,7 @@
 		FAB9094F2534486C00B35395 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		FAB909512534487100B35395 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		FAB909532534488300B35395 /* libtnksdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtnksdk.a; path = ../../../../Downloads/TNK_AD_MODULE_202010/sdklib/libtnksdk.a; sourceTree = "<group>"; };
-		FAB909552534489200B35395 /* tnksdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tnksdk.h; path = ../../../../Downloads/TNK_AD_MODULE_202010/sdklib/tnksdk.h; sourceTree = "<group>"; };
+		FAB909F225346C0C00B35395 /* tnksdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tnksdk.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				FAB909552534489200B35395 /* tnksdk.h */,
+				FAB909F225346C0C00B35395 /* tnksdk.h */,
 				FAB90946253447DD00B35395 /* Tnk.m */,
 				B3E7B5881CC2AC0600A0062D /* Tnk.h */,
 				B3E7B5891CC2AC0600A0062D /* Tnk.mm */,
