@@ -30,17 +30,16 @@ RCT_EXPORT_METHOD(setUserAge: (NSString *)userAge)
   [[TnkSession sharedInstance] setUserAge:(int) userAge];
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+RCT_EXPORT_METHOD(init: (NSString *)name)
 {
+  RCTLogInfo(@"TNK INIT. %@", name);
   NSString *tnkad_app_id = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"tnkad_app_id"];
 
-  // Tnk 초기화
+  // init
   [TnkSession initInstance:tnkad_app_id];
 
   // Tracking on/off
   [[TnkSession sharedInstance] setTrackingEnabled:YES];
-
-  return YES;
 }
 
 @end
