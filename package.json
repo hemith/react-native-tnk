@@ -1,6 +1,6 @@
 {
   "name": "@hemith/react-native-tnk",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "tnkfactory sdk",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

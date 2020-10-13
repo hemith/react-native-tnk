@@ -30,6 +30,12 @@ public class TnkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void init(String name) {
+      Log.d("tnkad", "applicationStarted. " + name);
+       TnkSession.applicationStarted(this.reactContext);
+    }
+
+    @ReactMethod
     public void actionCompleted(String actionName) {
     	 Log.d("tnkad", "actionCompleted. " + actionName);
        TnkSession.actionCompleted(this.reactContext, actionName);
