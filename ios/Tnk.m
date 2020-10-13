@@ -8,7 +8,7 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(applicationStarted: (NSString *)name)
 {
-  RCTLogInfo(@"TnkSession applicationStarted. %@", name);
+  RCTLogInfo(@"TNKAD TnkSession applicationStarted. %@", name);
   dispatch_async(dispatch_get_main_queue(), ^{
     [[TnkSession sharedInstance] applicationStarted];
   });
