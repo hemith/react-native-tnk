@@ -9,37 +9,50 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(applicationStarted: (NSString *)name)
 {
   RCTLogInfo(@"TnkSession applicationStarted. %@", name);
-  [[TnkSession sharedInstance] applicationStarted];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [[TnkSession sharedInstance] applicationStarted];
+  });
 }
 
 RCT_EXPORT_METHOD(actionCompleted: (NSString *)actionName)
 {
-  RCTLogInfo(@"TnkSession actionCompleted. %@", actionName);
-  [[TnkSession sharedInstance] actionCompleted:actionName];
+  RCTLogInfo(@"TNKAD TnkSession actionCompleted. %@", actionName);
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [[TnkSession sharedInstance] actionCompleted:actionName];
+  });
 }
 
 RCT_EXPORT_METHOD(buyCompleted: (NSString *)itemName)
 {
-  RCTLogInfo(@"TnkSession buyCompleted. %@", itemName);
-  [[TnkSession sharedInstance] buyCompleted:itemName];
+  RCTLogInfo(@"TNKAD TnkSession buyCompleted. %@", itemName);
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [[TnkSession sharedInstance] buyCompleted:itemName];
+  });
 }
 
 RCT_EXPORT_METHOD(setUserAge: (NSString *)userAge)
 {
-  RCTLogInfo(@"TnkSession setUserAge. %d", (int) userAge);
-  [[TnkSession sharedInstance] setUserAge:(int) userAge];
+  RCTLogInfo(@"TNKAD TnkSession setUserAge. %d", (int) userAge);
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [[TnkSession sharedInstance] setUserAge:(int) userAge];
+  });
 }
 
 RCT_EXPORT_METHOD(init: (NSString *)name)
 {
   RCTLogInfo(@"TNK INIT. %@", name);
   NSString *tnkad_app_id = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"tnkad_app_id"];
+  RCTLogInfo(@"TNKAD tnkad_app_id: %@", tnkad_app_id);
 
-  // init
-  [TnkSession initInstance:tnkad_app_id];
+  dispatch_async(dispatch_get_main_queue(), ^{
+    // init
+    [TnkSession initInstance:tnkad_app_id];
 
-  // Tracking on/off
-  [[TnkSession sharedInstance] setTrackingEnabled:YES];
+    [[TnkSession sharedInstance] applicationStarted];
+
+    // Tracking on/off
+    [[TnkSession sharedInstance] setTrackingEnabled:YES];
+  });
 }
 
 @end
